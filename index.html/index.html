@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Friendship Forever | Amrit & Swastika</title>
+<style>
+:root{--navy:#173b75;--blue:#6fb6f4;--sky:#eaf6ff;--pink:#ff9fbe;--ink:#18345c;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:linear-gradient(135deg,#e9f5ff,#fff4f7 55%,#e9f5ff);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#70aee8 1px,transparent 1px);background-size:18px 18px;z-index:-1}
+nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 6%;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid #cde5fb}
+.brand{font-weight:900;color:var(--navy);letter-spacing:.3px}nav a{color:var(--navy);text-decoration:none;font-weight:700;margin-left:16px;font-size:.92rem}
+.hero{min-height:85vh;display:grid;place-items:center;text-align:center;padding:65px 20px;position:relative}
+.hero-inner{max-width:850px}.pill{display:inline-block;padding:8px 15px;background:white;border:1px solid #cde5fb;border-radius:99px;color:var(--navy);font-weight:800}
+h1{font-size:clamp(2.7rem,8vw,5.7rem);line-height:1.02;margin:20px 0;color:var(--navy);letter-spacing:-2px}
+h1 span{color:#ef729c}.hero p{font-size:1.12rem;max-width:650px;margin:0 auto 25px;line-height:1.8}
+.btn{border:0;border-radius:999px;padding:13px 21px;background:var(--navy);color:white;font-weight:800;text-decoration:none;display:inline-block;cursor:pointer;box-shadow:0 8px 22px #173b7526;margin:5px}
+.btn.alt{background:white;color:var(--navy);border:1px solid #c4e1fb}
+section{padding:70px 6%;max-width:1150px;margin:auto}.section-title{text-align:center;font-size:clamp(2rem,5vw,3rem);color:var(--navy);margin:0 0 12px}.sub{text-align:center;max-width:650px;margin:0 auto 35px;line-height:1.7;color:#4b6384}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#ffffffd9;border:1px solid #d1e8fb;border-radius:24px;padding:25px;box-shadow:0 12px 35px #244b7910}.icon{font-size:2rem}.card h3{margin:10px 0;color:var(--navy)}.card p{line-height:1.7;margin-bottom:0}
+.letter{max-width:820px;margin:auto;background:white;border:1px solid #d7eaff;border-radius:28px;padding:clamp(25px,5vw,50px);box-shadow:0 18px 50px #244b7914;line-height:1.95;font-size:1.04rem;white-space:pre-line}
+.timeline{max-width:760px;margin:auto}.moment{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:18px 0;border-bottom:1px dashed #a7cfee}.date{font-weight:900;color:#e86c99}
+.surprise{text-align:center;background:linear-gradient(135deg,#dff1ff,#fff0f6);border:1px solid #cce5fa;border-radius:28px;padding:35px}.hidden{display:none;margin-top:22px;background:white;border-radius:20px;padding:25px;line-height:1.8}
+.qr-wrap{display:grid;grid-template-columns:1fr 240px;gap:25px;align-items:center;max-width:850px;margin:auto}.qr-placeholder{aspect-ratio:1;border:2px dashed #6caee7;border-radius:20px;display:grid;place-items:center;background:#f6fbff;text-align:center;padding:15px;color:#37649a;font-weight:800}.qr-placeholder .big{font-size:3rem}
+footer{text-align:center;padding:35px 15px;color:#567091} .tiny{font-size:.88rem;color:#627998}
+.floating{position:absolute;font-size:1.5rem;opacity:.7;animation:float 4s ease-in-out infinite}.f1{top:18%;left:12%}.f2{top:28%;right:12%;animation-delay:1s}.f3{bottom:15%;left:20%;animation-delay:2s}
+@keyframes float{50%{transform:translateY(-14px) rotate(8deg)}}
+.menu-toggle{display:none;border:1px solid #cde5fb;background:#fff;color:var(--navy);border-radius:12px;padding:8px 12px;font-size:1.2rem;cursor:pointer}
+img{max-width:100%}section{scroll-margin-top:82px}.btn{min-height:44px;align-items:center}.letter,.card,.surprise{overflow-wrap:anywhere}
+@media(max-width:760px){nav{padding:12px 4%;flex-wrap:wrap}.menu-toggle{display:block}.links{display:none;width:100%;flex-direction:column;gap:0;padding:5px 0 8px}.links.open{display:flex}.links a{margin:0;padding:12px 8px;border-top:1px solid #e4f0fa;font-size:.95rem!important}.grid{grid-template-columns:1fr}.qr-wrap{grid-template-columns:1fr}.qr-placeholder{max-width:250px;width:100%;margin:auto}.moment{grid-template-columns:78px minmax(0,1fr);gap:10px}.hero{min-height:75vh;padding:55px 18px}.hero p{font-size:1rem}.memory-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.memory-photo img{height:220px}section{padding:54px 5%}}
+@media(max-width:440px){.memory-gallery{grid-template-columns:1fr}.memory-photo img{height:280px}.pill{font-size:.78rem}h1{letter-spacing:-1px}.btn{padding:12px 16px}.moment{grid-template-columns:1fr;gap:4px}.date{font-size:.9rem}.letter{padding:22px;font-size:.98rem}.section-title{line-height:1.15}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<nav><div class="brand">💙 DALLI & AMRIT</div><button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" onclick="toggleMenu()">☰</button><div class="links" id="navLinks"><a href="#story">Our Bond</a><a href="#letter">Letter</a><a href="#from-kanxii">From Kanxii</a><a href="#from-kanxo">From Kanxo</a><a href="#surprise">Surprise</a></div></nav>
+<header class="hero">
+<div class="floating f1">💙</div><div class="floating f2">✨</div><div class="floating f3">🫂</div>
+<div class="hero-inner"><span class="pill">A LITTLE WEBSITE FOR A BIG FRIENDSHIP</span>
+<h1>Best Friends.<br><span>Forever Vibes.</span> ♾️</h1>
+<p>Mero pyaro Dalli 🥹❤️🫂 — hamro friendship mero life ko sabai bhanda ramro memories madhye euta bannechha. Timisanga kura garda man halka hunchha, ani timro smile le mero din ramro banaunchha. 🥹💗</p>
+<a class="btn" href="#letter">Read Your Letter 💌</a><a class="btn alt" href="#story">Our Friendship</a></div></header>
+<section id="story"><h2 class="section-title">Our Little Friendship Universe 🌎</h2><p class="sub">The small things, the laughs, the talks, and the memories that make a friendship feel like home.</p>
+<div class="grid">
+<div class="card"><div class="icon">🫂</div><h3>A Safe Place</h3><p>Even when days feel heavy, I hope you always remember you have a friend who wants to see you smile.</p></div>
+<div class="card"><div class="icon">😂</div><h3>Random Laughs</h3><p>May we always keep making silly memories, laughing at little things, and turning ordinary days into stories.</p></div>
+<div class="card"><div class="icon">♾️</div><h3>No Distance Can Change Us</h3><p>Time may pass and life may get busy, but I hope our friendship always keeps its own special place.</p></div>
+</div></section>
+<section id="letter"><h2 class="section-title">A Letter for My Dalli 💌</h2><p class="sub">A little message, saved here just for you.</p>
+<div class="letter">
+<p>Mero pyaro Dalli 🥹❤️🫂</p>
+<p>K tha, hamro friendship mero life ko sabai bhanda ramro memories madhye euta bannechha. Timisanga kura garda man halka hunchha, timro smile dekhda khusi lagchha, ani timi risayeko bela pani timilai manauna man lagchha. 😭💗</p>
+<p>Jindagima dherai manche aaulan, dherai manche jaalan, tara timijasto special manche sadhai mero life ma rahirahos bhanne chahana chha. 🫶🏻❤️ Hamro bichma kahile distance aayo, kura kam bhayo, ya misunderstanding bhayo bhane pani hamro friendship ko value kahile kam nahos.</p>
+<p>Ma sadhai perfect friend nahola, kahile galti pani hola, tara timilai hurt garne intention kahile hune chhaina. 🥺🫂 Timi dukhi huda malai samjhinnu, khusi huda malai share garnu, ani life le garo banayeko bela timi eklai chhau bhanne feel kahile nahos.</p>
+<p>Dalli, <b>hamro friendship temporary haina, lifetime ko mitho bond banos.</b> ❤️♾️ Samay badliyos, thau badliyos, life badliyos, tara hamro friendship ko maya ra respect kahile nabadliyos. Thank you for being such a beautiful part of my life. Love you as a best friend, mero Dalli! 🥹💗🫂</p>
+<div style="text-align:right;font-weight:900;color:#173b75;margin-top:18px">— Timro sathi, Amrit 💙</div>
+</div></section>
+
+<section id="from-kanxii"><h2 class="section-title">A Message from Kanxii 💌</h2><p class="sub">A heartfelt message, saved here just for you.</p>
+<div class="letter">I just want to say thank you for being there for me in every situation during my happiest moments and also when things were not going well. 🥹❤️ Thank you for always caring, understanding me, supporting me, and trusting me even when I couldn’t explain what I was feeling.☺️❤️
+
+Every moment we have spent together, every silly conversation,☺️ every laugh, 🤪and even our little arguments have become beautiful memories for me. 🫂❤️ I’m genuinely lucky to have someone like you in my life.🥰
+
+I hope this new year of your life brings you endless happiness, success, peace, and everything your heart wishes for. ✨ 🥰May you always have a reason to smile and never feel alone in your difficult days.🫂
+
+No matter how much life changes, I hope the bond we share always stays this special. Thank you for being such a caring, supportive, and trustworthy friend. ❤️‍🩹
+
+Stay happy, stay blessed, keep smiling, and always remember that you are truly special to me. 🫂✨
+
+<div style="text-align:right;font-weight:900;color:#173b75;margin-top:18px">— With love, Kanxii 💙</div></div></section>
+
+
+<section id="from-kanxo"><h2 class="section-title">A Message from Kanxo 💙</h2><p class="sub">Mero pyari Dalli ko lagi, dherai maya ra mitho samjhana. 🫂</p>
+<div class="letter">Meri pyari dalli ❤️🫂 tw mero lagi sathi matra hoinis, mero life ko euta pyaro part hos 🫶🏻💗 Sadhai yesari nai hasi rakhnu, khusi rahanu ani hamro friendship sadhai yestai rahirahos haii ❤️ Jati nai tada vayeni, hamro friendship kahile nabadliyos 🤝💖 Kahile aafailai eklai nasamjhinu hai, timro yo sathi sadhai timro saathma hunexa 🫂💕 meri dalli, sadhai yestai pyari rahanu haii ❤️🧿✨
+
+<strong>धेरै माया अनि मिठो सम्झना ❤️🫂💗</strong>
+
+<div style="text-align:right;font-weight:900;color:#173b75;margin-top:18px">— From Kanxo 💙</div></div></section>
+
+
+<style>
+.memory-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}
+.memory-photo{margin:0;background:#fff;border:1px solid #d1e8fb;border-radius:20px;overflow:hidden;box-shadow:0 12px 28px #244b7912}
+.memory-photo img{display:block;width:100%;height:290px;object-fit:cover}
+.memory-photo figcaption{padding:12px 14px;font-weight:750;color:#173b75;text-align:center}
+@media(max-width:760px){.memory-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.memory-photo img{height:210px}}
+@media(max-width:440px){.memory-gallery{grid-template-columns:1fr}.memory-photo img{height:300px}}
+</style>
+
+<section id="memories"><h2 class="section-title">Our Memories 📸💙</h2><p class="sub">Little moments, happy faces, and memories we’ll keep close forever. 🫂✨</p>
+<div class="memory-gallery">
+<figure class="memory-photo"><img src="memory-1.png" alt="A fun outdoor friendship portrait" loading="lazy"><figcaption>Our Fun Vibes 🤘💙</figcaption></figure>
+<figure class="memory-photo"><img src="memory-2.jpg" alt="A smiling memory" loading="lazy"><figcaption>A Smile to Remember 🥰</figcaption></figure>
+<figure class="memory-photo"><img src="memory-3.jpg" alt="A special outdoor memory" loading="lazy"><figcaption>Pretty Little Moments 🌸</figcaption></figure>
+<figure class="memory-photo"><img src="memory-4.jpeg" alt="Friends sitting together outdoors" loading="lazy"><figcaption>Us, Just Being Us 🫶🏻</figcaption></figure>
+<figure class="memory-photo"><img src="memory-5.jpeg" alt="A playful candid memory together" loading="lazy"><figcaption>Memories Full of Laughter 😂</figcaption></figure>
+</div></section>
+<section id="surprise"><h2 class="section-title">One Tiny Surprise 🎁</h2><p class="sub">Because every Dalli deserves a little extra love.</p><div class="surprise"><div style="font-size:2.5rem">💙🫂💗</div><h3>Tap when you’re ready</h3><button class="btn" onclick="document.getElementById('secret').classList.toggle('hidden')">Open Your Surprise ✨</button><div id="secret" class="hidden">Hey Dalli, no matter how busy life gets, I hope you never forget how special you are. Keep smiling, keep being your lovely self, and remember — you never have to face every hard day alone. Your friend is cheering for you. 💙🫶🏻</div></div></section>
+<section id="qr"><h2 class="section-title">A Little Link to Our Friendship 🔗</h2><p class="sub">After publishing this website, place a QR code linked to its public URL in the square below—or on the back of your Friendship License.</p><div class="qr-wrap"><div><h3 style="color:#173b75">Scan and smile 💙</h3><p style="line-height:1.8">When this page is online, you can create a QR code that opens this friendship website on a phone. Until then, this is only a placeholder, not a working QR code.</p><p class="tiny">Website URL: <span id="siteUrl">Publish this page first</span></p></div><div class="qr-placeholder"><div><div class="big">♡</div>YOUR QR CODE GOES HERE<br><span class="tiny">Add after publishing</span></div></div></div></section>
+<footer>Made with friendship, smiles, and lots of 💙<br><strong>Amrit & Swastika — Best Friends Forever</strong></footer>
+<script>function toggleMenu(){const links=document.getElementById('navLinks');const button=document.querySelector('.menu-toggle');const opened=links.classList.toggle('open');button.setAttribute('aria-expanded',String(opened));button.textContent=opened?'✕':'☰';}document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('navLinks').classList.remove('open');document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');document.querySelector('.menu-toggle').textContent='☰';}));document.getElementById('siteUrl').textContent = location.protocol==='file:' ? 'Publish this page first' : location.href;</script>
+</body></html>
